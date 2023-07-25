@@ -1,20 +1,23 @@
+"use client";
 import { headers } from "next/headers";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-export interface MyButtonProps {
+export interface MyClientButtonProps {
   name: string;
   href: string;
 }
 
-export async function MyButton({ name, href }: MyButtonProps) {
-  const headersList = headers();
-  const pathname = headersList.get("x-invoke-path");
+export function MyClientButton({ name, href }: MyClientButtonProps) {
+  const pathname = usePathname();
 
   // Extract the locale from the pathname
   const locale =
     process.env.NODE_ENV === "production" && pathname?.split("/")[1]
       ? `/${pathname?.split("/")[1]}`
       : "";
+
+  console.log("rodrigo ", locale);
 
   return (
     <Link

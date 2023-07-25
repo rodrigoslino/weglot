@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { headers } from "next/headers";
-import { MyButton } from "../components/my-button";
+import { MyServerButton } from "../components/my-server-button";
+import { MyClientButton } from "../components/my-client-button";
 
 export default function Test() {
   return (
@@ -14,7 +15,8 @@ export default function Test() {
         <p>This is a test</p>
       </div>
 
-      <MyButton name="Back to home" href="/" />
+      <MyServerButton name="Back to home (Server Button)" href="/" />
+      <MyClientButton name="Back to home (Client Button)" href="/" />
     </main>
   );
 }

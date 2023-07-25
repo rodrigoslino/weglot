@@ -1,12 +1,20 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { MyButton } from "./components/my-button";
+import { MyServerButton } from "./components/my-server-button";
+import { MyClientButton } from "./components/my-client-button";
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <MyButton name="Go to the Test page" href="/test" />
+        <MyServerButton
+          name="Go to the Test page (Server Button)"
+          href="/test"
+        />
+        <MyClientButton
+          name="Go to the Test page (Client Button)"
+          href="/test"
+        />
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>app/page.tsx</code>
