@@ -1,27 +1,26 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { MyServerButton } from "./components/my-server-button";
-import { MyClientButton } from "./components/my-client-button";
+import { MyServerLink } from "./components/my-server-link";
+import { MyClientLink } from "./components/my-client-link";
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <div>
+        <MyClientLink name="Go to the Test page (Client Link)" href="/test" />
+        <br />
+        <br />
+        <MyServerLink name="Go to the Test page (Server Link)" href="/test" />
+        <br />
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
       <div className={styles.description}>
         <div>
-          <MyClientButton
-            name="Go to the Test page (Client Button)"
-            href="/test"
-          />
-          <br />
-          <MyServerButton
-            name="Go to the Test page (Server Button)"
-            href="/test"
-          />
-          <br />
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>app/page.tsx</code>
-          </p>
+          Get started by editing&nbsp;
+          <code className={styles.code}>app/page.tsx</code>
         </div>
         <div>
           <a
