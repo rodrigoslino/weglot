@@ -22,12 +22,11 @@ export async function MyServerButton({ name, href }: MyServerButtonProps) {
   console.log("my-server-button locale", locale);
 
   return (
-    <Link
+    <a
       href={`${locale}${href}`}
       style={{ border: "solid 1px white", backgroundColor: "#ff1111" }}
-      prefetch={false}
     >
       {name}
-    </Link>
+    </a>
   );
 }
