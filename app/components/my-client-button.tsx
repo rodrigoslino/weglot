@@ -17,7 +17,12 @@ export function MyClientButton({ name, href }: MyClientButtonProps) {
       ? `/${pathname?.split("/")[0]}`
       : "";
 
-  console.log("rodrigo ", locale);
+  console.log(
+    "window.location.pathname",
+    typeof window !== "undefined" ? window.location.pathname : ""
+  );
+  console.log("pathname", pathname);
+  console.log("locale", locale);
 
   return (
     <Link
