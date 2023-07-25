@@ -25,11 +25,11 @@ export function MyClientButton({ name, href }: MyClientButtonProps) {
   console.log("locale", locale);
 
   return (
-    <Link
+    <a
       href={`${locale}${href}`}
       style={{ border: "solid 1px white", backgroundColor: "#ff1111" }}
     >
       {name}
-    </Link>
+    </a>
   );
 }
