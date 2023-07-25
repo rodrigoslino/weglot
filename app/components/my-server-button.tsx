@@ -12,8 +12,8 @@ export async function MyServerButton({ name, href }: MyServerButtonProps) {
 
   // Extract the locale from the pathname
   const locale =
-    process.env.NODE_ENV === "production" && pathname?.split("/")[0]
-      ? `/${pathname?.split("/")[0]}`
+    process.env.NODE_ENV === "production" && pathname?.split("/")[1]
+      ? `/${pathname?.split("/")[1]}`
       : "";
 
   console.log("rodrigo ", locale);
