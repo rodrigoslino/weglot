@@ -30,6 +30,7 @@ export function MyClientButton({ name, href }: MyClientButtonProps) {
     <Link
       href={`${locale}${href}`}
       style={{ border: "solid 1px white", backgroundColor: "#ff1111" }}
+      prefetch={false}
     >
       {name}
     </Link>

@@ -25,6 +25,7 @@ export async function MyServerButton({ name, href }: MyServerButtonProps) {
     <Link
       href={`${locale}${href}`}
       style={{ border: "solid 1px white", backgroundColor: "#ff1111" }}
+      prefetch={false}
     >
       {name}
     </Link>
