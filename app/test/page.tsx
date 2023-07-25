@@ -14,9 +14,13 @@ export default function Test() {
         </p>
         <p>This is a test</p>
       </div>
-
-      <MyServerButton name="Back to home (Server Button)" href="/" />
-      <MyClientButton name="Back to home (Client Button)" href="/" />
+      <br />
+      <div>
+        <MyClientButton name="Back to home (Client Button)" href="/" />
+        <br />
+        <br />
+        <MyServerButton name="Back to home (Server Button)" href="/" />
+      </div>
     </main>
   );
 }

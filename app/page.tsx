@@ -7,18 +7,22 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <MyServerButton
-          name="Go to the Test page (Server Button)"
-          href="/test"
-        />
-        <MyClientButton
-          name="Go to the Test page (Client Button)"
-          href="/test"
-        />
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
+        <div>
+          <MyClientButton
+            name="Go to the Test page (Client Button)"
+            href="/test"
+          />
+          <br />
+          <MyServerButton
+            name="Go to the Test page (Server Button)"
+            href="/test"
+          />
+          <br />
+          <p>
+            Get started by editing&nbsp;
+            <code className={styles.code}>app/page.tsx</code>
+          </p>
+        </div>
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
