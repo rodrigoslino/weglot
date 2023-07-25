@@ -9,16 +9,14 @@ export interface MyClientButtonProps {
 }
 
 export function MyClientButton({ name, href }: MyClientButtonProps) {
+  const available_locales = ["br", "es"];
   const pathname = usePathname();
 
   // Extract the locale from the pathname
   const locale =
     process.env.NODE_ENV === "production" &&
-    pathname.endsWith("/") &&
-    pathname?.split("/")[1]
-      ? `/${pathname?.split("/")[1]}`
-      : !pathname.endsWith("/")
-      ? pathname?.split("/")[0]
+    available_locales.includes(pathname.split("/")[1])
+      ? `/${pathname.split("/")[1]}`
       : "";
 
   console.log(
