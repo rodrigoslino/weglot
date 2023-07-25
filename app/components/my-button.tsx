@@ -12,7 +12,9 @@ export async function MyButton({ name, href }: MyButtonProps) {
 
   // Extract the locale from the pathname
   const locale =
-    process.env.NODE_ENV === "production" ? `/${pathname?.split("/")[1]}` : "";
+    process.env.NODE_ENV === "production" && pathname?.split("/")[1]
+      ? `/${pathname?.split("/")[1]}`
+      : "";
 
   return (
     <Link
