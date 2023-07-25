@@ -1,10 +1,12 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
+import { MyButton } from "./components/my-button";
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
+        <MyButton name="Go to the Test page" href="/test" />
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>app/page.tsx</code>
@@ -15,7 +17,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
+            By{" "}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -91,5 +93,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-  )
+  );
 }
