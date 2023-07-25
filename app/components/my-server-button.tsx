@@ -7,13 +7,15 @@ export interface MyServerButtonProps {
 }
 
 export async function MyServerButton({ name, href }: MyServerButtonProps) {
+  const available_locales = ["br", "es"];
   const headersList = headers();
-  const pathname = headersList.get("x-invoke-path");
+  const pathname = headersList.get("x-invoke-path") || "";
 
   // Extract the locale from the pathname
   const locale =
-    process.env.NODE_ENV === "production" && pathname?.split("/")[1]
-      ? `/${pathname?.split("/")[1]}`
+    process.env.NODE_ENV === "production" &&
+    available_locales.includes(pathname.split("/")[1])
+      ? `/${pathname.split("/")[1]}`
       : "";
 
   console.log("my-server-button pathname", pathname);
