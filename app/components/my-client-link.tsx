@@ -43,7 +43,7 @@ export function MyClientLink({ name, href }: MyClientLinkProps) {
         >
           {name} (nextjs link)
         </Link>{" "}
-        Nexjs link doesn't work when a lang is set in the pathname
+        Nexjs link doesn`t work when a lang is set in the pathname
       </div>
     </>
   );

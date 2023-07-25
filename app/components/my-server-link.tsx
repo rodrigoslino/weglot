@@ -37,7 +37,7 @@ export async function MyServerLink({ name, href }: MyServerLinkProps) {
       >
         {name} (nextjs link)
       </Link>
-      Nexjs link doesn't work when a lang is set in the pathname
+      Nexjs link doesn`t work when a lang is set in the pathname
     </>
   );
 }
