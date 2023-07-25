@@ -13,16 +13,20 @@ export function MyClientButton({ name, href }: MyClientButtonProps) {
 
   // Extract the locale from the pathname
   const locale =
-    process.env.NODE_ENV === "production" && pathname?.split("/")[1]
+    process.env.NODE_ENV === "production" &&
+    pathname.endsWith("/") &&
+    pathname?.split("/")[1]
       ? `/${pathname?.split("/")[1]}`
+      : !pathname.endsWith("/")
+      ? pathname?.split("/")[0]
       : "";
 
   console.log(
-    "window.location.pathname",
+    "my-client-button window.location.pathname",
     typeof window !== "undefined" ? window.location.pathname : ""
   );
-  console.log("pathname", pathname);
-  console.log("locale", locale);
+  console.log("my-client-button pathname", pathname);
+  console.log("my-client-button  locale", locale);
 
   return (
     <a

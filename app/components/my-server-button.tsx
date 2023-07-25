@@ -16,7 +16,8 @@ export async function MyServerButton({ name, href }: MyServerButtonProps) {
       ? `/${pathname?.split("/")[1]}`
       : "";
 
-  console.log("rodrigo ", locale);
+  console.log("my-server-button pathname", pathname);
+  console.log("my-server-button locale", locale);
 
   return (
     <a
