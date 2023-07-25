@@ -13,8 +13,8 @@ export function MyClientButton({ name, href }: MyClientButtonProps) {
 
   // Extract the locale from the pathname
   const locale =
-    process.env.NODE_ENV === "production" && pathname?.split("/")[1]
-      ? `/${pathname?.split("/")[1]}`
+    process.env.NODE_ENV === "production" && pathname?.split("/")[0]
+      ? `/${pathname?.split("/")[0]}`
       : "";
 
   console.log("rodrigo ", locale);
