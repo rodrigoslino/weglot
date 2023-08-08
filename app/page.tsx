@@ -24,6 +24,11 @@ export default function Home() {
       {clicked && clicked2 && (
         <>this text should appear for clicked and clicked 2</>
       )}
+      <>
+        {clicked && clicked2 && (
+          <>this text should appear for clicked and clicked 2</>
+        )}
+      </>
 
       <div>
         {/* <MyClientLink name="Go to the Test page (Client Link)" href="/test" /> */}
