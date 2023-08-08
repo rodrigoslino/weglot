@@ -7,13 +7,24 @@ import { useState } from "react";
 
 export default function Home() {
   const [clicked, setClicked] = useState<boolean>();
+  const [clicked2, setClicked2] = useState<boolean>();
 
   return (
     <main className={styles.main}>
       <button onClick={() => setClicked(!clicked)}>
-        Show show/hidden text
+        Show show/hidden text for clicked
       </button>
-      {clicked && <>this text should appear</>}
+      {clicked && <>this text should appear for clicked</>}
+
+      <button onClick={() => setClicked(!clicked)}>
+        Show show/hidden text for clicked2
+      </button>
+      {clicked2 && <>this text should appear for clicked2</>}
+
+      {clicked && clicked2 && (
+        <>this text should appear for clicked and clicked 2</>
+      )}
+
       <div>
         {/* <MyClientLink name="Go to the Test page (Client Link)" href="/test" /> */}
         <br />
