@@ -27,7 +27,7 @@ export default function RootLayout({
         <Script
           strategy="lazyOnload"
           id="weglot-initialize"
-        >{`if(Weglot){Weglot.initialize({ api_key: 'wg_6e8cd45412c48c12621cf05910422b335'})}`}</Script>
+        >{`if(Weglot){Weglot.initialize({ api_key: 'wg_ad6ea905cd794347c4ec12f59342d5fc5'})}`}</Script>
       </head>
       <body className={inter.className}>{children}</body>
     </html>
