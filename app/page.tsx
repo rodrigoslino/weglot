@@ -10,7 +10,9 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <button onClick={() => setClicked(true)}>Show hidden text</button>
+      <button onClick={() => setClicked(!clicked)}>
+        Show show/hidden text
+      </button>
       {clicked && <>this text should appear</>}
       <div>
         {/* <MyClientLink name="Go to the Test page (Client Link)" href="/test" /> */}
