@@ -1,11 +1,17 @@
+"use client";
 import Image from "next/image";
 import styles from "./page.module.css";
 import { MyServerLink } from "./components/my-server-link";
 import { MyClientLink } from "./components/my-client-link";
+import { useState } from "react";
 
 export default function Home() {
+  const [clicked, setClicked] = useState<boolean>();
+
   return (
     <main className={styles.main}>
+      <button onClick={() => setClicked(true)}></button>
+      {clicked && <>this text should appear</>}
       <div>
         <MyClientLink name="Go to the Test page (Client Link)" href="/test" />
         <br />
