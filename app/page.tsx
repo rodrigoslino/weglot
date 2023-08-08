@@ -16,7 +16,7 @@ export default function Home() {
       </button>
       {clicked && <>this text should appear for clicked</>}
 
-      <button onClick={() => setClicked(!clicked)}>
+      <button onClick={() => setClicked2(!clicked2)}>
         Show show/hidden text for clicked2
       </button>
       {clicked2 && <>this text should appear for clicked2</>}
